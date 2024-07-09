@@ -1,18 +1,18 @@
-import  { useState, ChangeEvent, FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { TextField, Button, Container, Box, Typography } from '@mui/material';
+import { useState, ChangeEvent, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
+import { TextField, Button, Container, Box, Typography } from "@mui/material";
 
 export type LoginFormInput = {
   name: string;
   phoneNumber: string;
   email: string;
-}
+};
 
 const Login = () => {
   const [formData, setFormData] = useState<LoginFormInput>({
-    name: '',
-    phoneNumber: '',
-    email: ''
+    name: "",
+    phoneNumber: "",
+    email: "",
   });
 
   const navigate = useNavigate();
@@ -20,19 +20,19 @@ const Login = () => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    localStorage.setItem('userDetails', JSON.stringify(formData));
-    navigate('/home');
+    localStorage.setItem("userDetails", JSON.stringify(formData));
+    navigate("/home");
   };
 
   return (
     <Container maxWidth="sm">
-      <Box mt={5} sx={{ textAlign: 'center' }}>
+      <Box mt={5} sx={{ textAlign: "center" }}>
         <Typography variant="h4" component="h1" gutterBottom>
           Login Page
         </Typography>
