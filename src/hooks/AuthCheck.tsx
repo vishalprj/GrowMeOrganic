@@ -15,7 +15,10 @@ const AuthCheck = ({ children }: AuthCheckType) => {
 
     if (!details) {
       if (!initialLoad.current) {
+        console.log("Navigating to login and showing toast");
         toast.error("You must enter your details before accessing this page.");
+      } else {
+        console.log("Initial load: navigating to login without toast");
       }
       navigate("/login");
     }

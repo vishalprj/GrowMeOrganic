@@ -19,6 +19,7 @@ function App() {
             </AuthCheck>
           }
         />
+        <Route path="*" element={<Login />} />
       </Routes>
     </Router>
   );
