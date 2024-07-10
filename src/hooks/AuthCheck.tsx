@@ -13,9 +13,6 @@ const AuthCheck = ({ children }: AuthCheckType) => {
     const details = localStorage.getItem("userDetails");
     if (!details) {
       toast.error("You must enter your details before accessing this page.");
-      setTimeout(() => {
-        navigate("/login");
-      }, 1000);
     }
   }, [navigate]);
 
