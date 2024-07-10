@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <Container maxWidth="sm">
       <Box mt={5} sx={{ textAlign: "center" }}>
-        <Typography variant="h4" component="h1" gutterBottom>
+        <Typography variant="h4" gutterBottom>
           Login Page
         </Typography>
         <form onSubmit={handleSubmit}>
