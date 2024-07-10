@@ -1,6 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Container, Box, Typography } from "@mui/material";
+import { toast } from "react-toastify";
 
 export type LoginFormInput = {
   name: string;
@@ -27,7 +28,8 @@ const Login = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     localStorage.setItem("userDetails", JSON.stringify(formData));
-    navigate("/home");
+    navigate("/");
+    toast.success("User login successfully");
   };
 
   return (
