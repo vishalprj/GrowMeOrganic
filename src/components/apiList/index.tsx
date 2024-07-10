@@ -33,8 +33,6 @@ const ApiList = () => {
     }
   }, [navigate]);
 
-  console.log("🚀 ~ ApiList ~ posts:", posts);
-
   const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
     { field: "title", headerName: "Title", width: 400 },
