@@ -12,7 +12,7 @@ const AuthCheck = ({ children }: AuthCheckType) => {
   useEffect(() => {
     const details = localStorage.getItem("userDetails");
     if (!details) {
-      alert("You must enter your details before accessing this page.");
+      toast.error("You must enter your details before accessing this page.");
     }
   }, [navigate]);
 
